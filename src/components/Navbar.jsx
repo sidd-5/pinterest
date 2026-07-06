@@ -12,7 +12,7 @@ export default function Navbar() {
     { name: 'Rental Friendly', slug: 'rental-friendly', isStaticPath: false },
     { name: 'Kitchen and Pantry', slug: 'kitchen-and-pantry', isStaticPath: false }, 
     { name: 'Modern Heritage', slug: 'modern-heritage', isStaticPath: false },
-    { name: 'Blog', slug: 'blog', isStaticPath: true }, // New dedicated clean path item
+    //{ name: 'Blog', slug: 'blog', isStaticPath: true }, // New dedicated clean path item
   ];
 
   return (

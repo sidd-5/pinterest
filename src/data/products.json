@@ -33,7 +33,7 @@
     "id": "jin-office-desk-frame",
     "title": "Jin Office Height Adjustable Desk Frame",
     "niche": "wfh",
-    "featured": false,
+    "featured": true,
     "description": "Transform any workspace into a healthier, more productive environment with the Jin Office Height Adjustable Desk Frame. Built with a reinforced steel structure and smooth height adjustment mechanism, this versatile desk frame lets you effortlessly switch between sitting and standing throughout the day. Whether you're working, studying, gaming, or creating, it adapts to your ideal posture for maximum comfort and efficiency.",
     "images": [
       "hd/wfh/Jin_Office_Height_Adjustable_Desk_Frame/3a.jpg",
@@ -257,7 +257,7 @@
     "id": "hexagon-acrylic-mirror-stickers",
     "title": "Hexagon Acrylic Mirror Wall Stickers",
     "niche": "rental-friendly",
-    "featured": false,
+    "featured": true,
     "description": "Transform plain walls into eye-catching statement pieces with these Hexagon Acrylic Mirror Wall Stickers. Elegant geometric design meets a reflective mirror finish that enhances light and creates a spacious feel. Lightweight, durable, safer than glass, and equipped with a self-adhesive backing for quick, damage-free installation.",
     "images": [
       "hd/rental/Hexagon_Acrylic_Mirror_Wall_Stickers/3a.jpg",
@@ -437,7 +437,7 @@
     "id": "painting-mantra-framed-art-set",
     "title": "PAINTING MANTRA Framed Wall Art Set",
     "niche": "rental-friendly",
-    "featured": false,
+    "featured": true,
     "description": "Turn empty walls into a gallery-grade masterpiece. This multi-panel curated framed wall art set delivers high-quality printing with vibrant colors and sharp detailing. Ready to hang, it adds immediate warmth, depth, and character to living rooms, offices, or bedroom setups.",
     "images": [
       "hd/rental/PAINTING_MANTRA_Framed_Wall_Art_Set/15a.jpg",
@@ -581,7 +581,7 @@
     "id": "agaro-electric-kettle",
     "title": "AGARO Electric Kettle",
     "niche": "kitchen-and-pantry",
-    "featured": false,
+    "featured": true,
     "description": "Enjoy your favorite hot beverages in minutes with the AGARO Electric Kettle, a perfect blend of performance, convenience, and modern elegance. Features rapid boiling technology, premium hygienic stainless steel interiors, and an automatic shut-off safety mechanism for everyday countertop convenience.",
     "images": [
       "hd/kitchen/AGARO_Electric_Kettle/10a.jpg",
@@ -611,7 +611,7 @@
     "id": "cold-press-juicer",
     "title": "Cold Press Juicer",
     "niche": "kitchen-and-pantry",
-    "featured": false,
+    "featured": true,
     "description": "Start your day with healthier habits and nutrient-rich beverages using this Cold Press Juicer. Designed to extract maximum yield while preserving natural vitamins, enzymes, and pure flavor profiles, its slow extraction configuration separates juice and pulp efficiently with a highly stable anti-drip lock.",
     "images": [
       "hd/kitchen/Cold_Press_Juicer/12a.jpg",
@@ -802,9 +802,9 @@
   },
   {
     "id": "paintingmantra-indian-art-prints",
-    "title": "PAINTINGMANTRA Indian Wall Art Prints",
+    "title": "PAINTING MANTRA Indian Wall Art Prints",
     "niche": "modern-heritage",
-    "featured": false,
+    "featured": true,
     "description": "Transform your walls into a gallery of timeless beauty and cultural elegance. Featuring intricate historical details and classic Indian aesthetic themes, this vintage-inspired framed wall art set adds character, depth, and structural focal points to living rooms and workspaces.",
     "images": [ 
       "hd/modern/PAINTINGMANTRA_Indian_Wall_Art_Prints/10a.jpg",
@@ -849,7 +849,7 @@
     "id": "sheesham-wood-folding-stool",
     "title": "Sheesham Wood Folding Stool",
     "niche": "modern-heritage",
-    "featured": false,
+    "featured": true,
     "description": "Enhance your living space with this beautifully crafted Wooden Chowki, made from premium Sheesham wood. Featuring intricate structural detailing and a classic rich finish, this versatile traditional asset performs perfectly as a pooja ritual stand, low seating accent, or an elegant indoor plant pedestal.",
     "images": [
       "hd/modern/Sheesham_Wood_Folding_Stool/13a.jpg",

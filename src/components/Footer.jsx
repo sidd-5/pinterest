@@ -19,18 +19,19 @@ export default function Footer() {
             <div>
               <h4 style={{ color: '#000000', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1rem' }}>Collections</h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem' }}>
-                <li><Link href="/niche/home-decor">Home Decor</Link></li>
-                <li><Link href="/niche/home-office">Home Office</Link></li>
-                <li><Link href="/niche/tech-gadgets">Tech Gadgets</Link></li>
+                <li><Link href="/niche/wfh">Work from Home</Link></li>
+                <li><Link href="/niche/rental-friendly">Rental Friendly Decor Hacks</Link></li>
+                <li><Link href="/niche/kitchen-and-pantry">Kitchen & Pantry</Link></li>
+                <li><Link href="/niche/modern-heritage">Modern Heritage & Traditional Fusion</Link></li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h4 style={{ color: '#000000', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1rem' }}>Legal</h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem' }}>
                 <li><span style={{ cursor: 'pointer' }}>Privacy Policy</span></li>
                 <li><span style={{ cursor: 'pointer' }}>Terms of Service</span></li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 

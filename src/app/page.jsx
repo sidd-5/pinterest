@@ -9,42 +9,50 @@ export default function Home() {
 
   // Auto-scrolling Logic Engine
   useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
+  const slider = sliderRef.current;
+  if (!slider) return;
 
-    let animationFrameId;
-    let scrollSpeed = 1;
+  let animationFrameId;
+  const scrollSpeed = 0.8;
 
-    const scrollLoop = () => {
-      slider.scrollLeft += scrollSpeed;
-      if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 2) {
-        slider.scrollLeft = 0;
-      }
-      animationFrameId = requestAnimationFrame(scrollLoop);
-    };
+  const totalWidth = slider.scrollWidth / 2;
+
+  const scrollLoop = () => {
+    slider.scrollLeft += scrollSpeed;
+
+    // Seamless infinite loop
+    if (slider.scrollLeft >= totalWidth) {
+      slider.scrollLeft -= totalWidth;
+    }
 
     animationFrameId = requestAnimationFrame(scrollLoop);
+  };
 
-    const handleMouseEnter = () => cancelAnimationFrame(animationFrameId);
-    const handleMouseLeave = () => {
-      animationFrameId = requestAnimationFrame(scrollLoop);
-    };
+  animationFrameId = requestAnimationFrame(scrollLoop);
 
-    slider.addEventListener('mouseenter', handleMouseEnter);
-    slider.addEventListener('mouseleave', handleMouseLeave);
-    slider.addEventListener('touchstart', handleMouseEnter);
-    slider.addEventListener('touchend', handleMouseLeave);
+  const stopScrolling = () => cancelAnimationFrame(animationFrameId);
 
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      if (slider) {
-        slider.removeEventListener('mouseenter', handleMouseEnter);
-        slider.removeEventListener('mouseleave', handleMouseLeave);
-        slider.removeEventListener('touchstart', handleMouseEnter);
-        slider.removeEventListener('touchend', handleMouseLeave);
-      }
-    };
-  }, []);
+  const startScrolling = () => {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = requestAnimationFrame(scrollLoop);
+  };
+
+  slider.addEventListener("mouseenter", stopScrolling);
+  slider.addEventListener("mouseleave", startScrolling);
+
+  slider.addEventListener("touchstart", stopScrolling);
+  slider.addEventListener("touchend", startScrolling);
+
+  return () => {
+    cancelAnimationFrame(animationFrameId);
+
+    slider.removeEventListener("mouseenter", stopScrolling);
+    slider.removeEventListener("mouseleave", startScrolling);
+
+    slider.removeEventListener("touchstart", stopScrolling);
+    slider.removeEventListener("touchend", startScrolling);
+  };
+}, []);
 
   // Filter explicitly marked featured items safely
   let sliderProducts = productsData.filter(product => product.featured === true).slice(0, 10);
@@ -100,15 +108,15 @@ export default function Home() {
             className="horizontal-slider" 
             style={{ display: 'flex', gap: '2rem', overflowX: 'auto', padding: '1rem 1.5rem 2.5rem 1.5rem', behavior: 'smooth' }}
           >
-            {sliderProducts.map((product, idx) => {
+            {[...sliderProducts, ...sliderProducts].map((product, idx) =>  {
               const displayNicheName = product.niche === 'wfh' ? 'Work From Home' : product.niche.replace(/-/g, ' ');
               return (
-                <div key={product.id} style={{ flex: '0 0 310px', border: '1px solid var(--brand-color)', backgroundColor: '#ffffff', overflow: 'hidden' }} className="slider-card-item">
+                <div key={`${product.id}-${idx}`} style={{ flex: '0 0 310px', border: '1px solid var(--brand-color)', backgroundColor: '#ffffff', overflow: 'hidden' }} className="slider-card-item">
                   <div style={{ height: '260px', overflow: 'hidden', position: 'relative', borderBottom: '1px solid var(--brand-color)' }}>
                     <img src={product.images ? product.images[0] : '/images/placeholder.jpg'} alt={product.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <span style={{ position: 'absolute', top: '0', left: '0', backgroundColor: 'var(--brand-color)', color: '#fff', fontSize: '0.65rem', fontWeight: '900', padding: '0.4rem 0.8rem', textTransform: 'uppercase' }}>
+                    {/* <span style={{ position: 'absolute', top: '0', left: '0', backgroundColor: 'var(--brand-color)', color: '#fff', fontSize: '0.65rem', fontWeight: '900', padding: '0.4rem 0.8rem', textTransform: 'uppercase' }}>
                       ITEM {idx + 1 === 10 ? '10' : `0${idx + 1}`}
-                    </span>
+                    </span> */}
                   </div>
                   <div style={{ padding: '1.5rem' }}>
                     <span style={{ fontSize: '0.7rem', fontWeight: '900', color: 'var(--brand-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
