@@ -8,7 +8,8 @@ export default function Footer() {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '2rem' }}>
           <div>
             <span style={{ fontSize: '1.1rem', fontWeight: '900', color: '#000000', letterSpacing: '-0.02em' }}>
-              PIN<span style={{ color: 'var(--brand-color)' }}>TRENDS</span>
+              {/* PIN<span style={{ color: 'var(--brand-color)' }}>TRENDS</span> */}
+              <img src="/logo.png" alt="PinTrends Logo" style={{ height: '70px', width: 'auto', display: 'inline-block', objectFit: 'contain' }} />
             </span>
             <p style={{ fontSize: '0.85rem', marginTop: '0.5rem', maxWidth: '300px', lineHeight: '1.5' }}>
               Bringing the absolute best viral trending styles right from your feed to your home.
